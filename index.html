@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta
       name="viewport"
-      content="width=device-width, user-scalable=no, initial-scale=1.0"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
     />
     <meta content="ie=edge" http-equiv="X-UA-Compatible" />
     <meta name="author" content="Edder Gallegos" />
@@ -12,7 +12,85 @@
     <link rel="shortcut icon" href="favicon.ico" />
     <link rel="stylesheet" href="./pages/index.css" />
   </head>
+
   <body class="page">
-    <div class="page__content">Testing</div>
+    <div class="page__content">
+      <header class="header page__section">
+        <img
+          src="./images/logo-white.svg"
+          alt="Around the U.S Logo"
+          class="header__logo"
+        />
+        <div class="header__line"></div>
+      </header>
+      <main class="content">
+        <section class="profile page__section">
+          <img
+            src="./images/jacques-cousteau.jpg"
+            alt="Avatar"
+            class="profile__image"
+          />
+          <div class="profile__info">
+            <h1 class="profile__title">Jacques Cousteau</h1>
+            <button class="profile__edit-button"></button>
+            <p class="profile__description">Explorer</p>
+          </div>
+          <div class="profile__add-button"></div>
+        </section>
+
+        <section class="cards page__section">
+          <ul class="card__list">
+            <li class="card">
+              <img src="./images/yosemite.jpg" class="card__image" />
+              <div class="card__description">
+                <h2 class="card__name">Yosemite Valley</h2>
+                <button class="card__like-button"></button>
+              </div>
+            </li>
+            <li class="card">
+              <img src="./images/lake-louise.jpg" class="card__image" />
+              <div class="card__description">
+                <h2 class="card__name">Lake Louise</h2>
+                <button class="card__like-button"></button>
+              </div>
+            </li>
+            <li class="card">
+              <img src="./images/bald-mountains.jpg" class="card__image" />
+              <div class="card__description">
+                <h2 class="card__name">Bald Mountains</h2>
+                <button class="card__like-button"></button>
+              </div>
+            </li>
+            <li class="card">
+              <img src="./images/latemar.jpg" class="card__image" />
+              <div class="card__description">
+                <h2 class="card__name">Latemar</h2>
+                <button class="card__like-button"></button>
+              </div>
+            </li>
+            <li class="card">
+              <img src="./images/vanoise.jpg" class="card__image" />
+              <div class="card__description">
+                <h2 class="card__name">Vaniose National Park</h2>
+                <button class="card__like-button"></button>
+              </div>
+            </li>
+            <li class="card">
+              <img src="./images/lago.jpg" class="card__image" />
+              <div class="card__description">
+                <h2 class="card__name">Lago di Braies</h2>
+                <button class="card__like-button"></button>
+              </div>
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <footer class="footer">
+            <p class="footer__copywrite">&copy;2024 Edder Gallegos</p>
+          </footer>
+        </section>
+      </main>
+    </div>
   </body>
 </html>
