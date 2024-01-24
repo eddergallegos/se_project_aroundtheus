@@ -24,5 +24,6 @@
   .header__line {
     margin-top: 32px;
     width: 320px;
+    margin-bottom: 6.25px;
   }
 }

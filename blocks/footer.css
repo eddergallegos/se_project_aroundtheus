@@ -5,3 +5,9 @@
   height: 18px;
   margin: 67px 762px 60px 200px;
 }
+
+@media screen and (max-width: 320px) {
+  .footer__copywrite {
+    margin: 48px 19px 36px;
+  }
+}
