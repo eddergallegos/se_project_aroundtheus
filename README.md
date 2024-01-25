@@ -8,11 +8,20 @@ This project includes images from all around the United States from an Explorer 
 
 ## Project features
 
-This project features:
+This Project's Features and Screenshots
 1. HTML5 is an evolutionary leap in web development capabilities from previous HTML versions. 
+![HTML5](https://github.com/eddergallegos/se_project_aroundtheus/assets/153459634/d0ee96f7-efd2-4a3a-ab59-c3919522cd05)
 
 2. CSS allows a user to style the content of a website using incredible capabilities such as grid layouts.
+![CSS](https://github.com/eddergallegos/se_project_aroundtheus/assets/153459634/83febc40-5dc9-47fb-b3a9-b01c508d17b0)
 
 3. Figma is used to seamlessly design, prototype, develop, and collect feedback all in one platform.
+![Figma](https://github.com/eddergallegos/se_project_aroundtheus/assets/153459634/1b2ab0a6-a157-49d5-a45e-bd3dbfb9629b)
 
-## Link to Project 3: Around the U.S;  
+
+## Link to Project 3: Around the U.S  
+git@github.com:eddergallegos/se_project_aroundtheus.git
+
+## Project 3 future improvements
+Please be advised that this project is not complete, this project is currently in the first stages and will need more code for the project to be completed. 
+
