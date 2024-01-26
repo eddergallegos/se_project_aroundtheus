@@ -22,6 +22,9 @@ This Project's Features and Screenshots
 ## Link to Project 3: Around the U.S  
 git@github.com:eddergallegos/se_project_aroundtheus.git
 
+## Link to project 3: Demo Video
+https://youtu.be/yvq7yIIIhd0
+
 ## Project 3 future improvements
 Please be advised that this project is not complete, this project is currently in the first stages and will need more code for the project to be completed. 
 
