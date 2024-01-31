@@ -44,11 +44,18 @@
 }
 
 .card__like-button {
-  background: transparent url(../images/like-inactive.svg) center no-repeat;
+  background: transparent url(../images/like-button.svg) center no-repeat;
   width: 21px;
   height: 18px;
   border: none;
   flex-shrink: 0;
+}
+
+.card__like-button:hover {
+  color: grey;
+  transition: 0.3s linear;
+  cursor: pointer;
+  opacity: 0.3;
 }
 
 @media screen and (max-width: 320px) {
