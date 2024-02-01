@@ -19,8 +19,11 @@ This Project's Features and Screenshots
 ![Figma](https://github.com/eddergallegos/se_project_aroundtheus/assets/153459634/1b2ab0a6-a157-49d5-a45e-bd3dbfb9629b)
 
 
-## Link to Project 3: Around the U.S  
+## Link to Project 3 Github Pages: Around the U.S
 https://eddergallegos.github.io/se_project_aroundtheus/
+
+## Link to Project 3 Github Repository: Around the U.S
+https://github.com/eddergallegos/se_project_aroundtheus.git
 
 ## Link to project 3: Demo Video
 https://youtu.be/yvq7yIIIhd0
