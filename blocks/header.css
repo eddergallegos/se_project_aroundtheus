@@ -11,10 +11,17 @@
   .header {
     max-width: 75%;
   }
+}
 
-  .header__line {
-    width: 580px;
-    margin-left: 100px;
+@media screen and (max-width: 568px) {
+  .header {
+    max-width: 100%;
+  }
+
+  .header__logo {
+    margin-left: 125px;
+    width: 126px;
+    height: 24px;
   }
 }
 
@@ -28,12 +35,5 @@
     width: 126px;
     height: 24px;
     margin: 28px 167px 32px 27px;
-  }
-
-  .header__line {
-    margin-top: 32px;
-    width: 320px;
-    margin-bottom: 6.25px;
-    margin-left: 0;
   }
 }

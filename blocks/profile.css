@@ -16,14 +16,13 @@
   width: 24px;
   grid-area: button;
   margin: 15px 0 -110px 42px;
-  border: #fff solid;
+  border: 1px white solid;
 }
 
 .profile__edit-button:hover {
-  color: grey;
   transition: 0.3s linear;
   cursor: pointer;
-  opacity: 0.3;
+  opacity: 0.6;
 }
 
 .profile__add-button {
@@ -31,14 +30,14 @@
   height: 50px;
   width: 150px;
   margin-left: auto;
-  border: solid white;
+  border: 2px solid white;
+  border-radius: 2px;
 }
 
 .profile__add-button:hover {
-  color: grey;
   transition: 0.3s linear;
   cursor: pointer;
-  opacity: 0.3;
+  opacity: 0.6;
 }
 
 .profile__title {
@@ -48,6 +47,7 @@
   grid-area: title;
   margin: Auto 0 0 24px;
   white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .profile__description {
@@ -57,6 +57,7 @@
   grid-area: description;
   margin: 16px 0 0 24px;
   width: 415px;
+  text-overflow: ellipsis;
 }
 
 .profile__image {
@@ -70,14 +71,60 @@
 @media screen and (max-width: 775px) {
   .profile__info {
     margin-left: 10px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
 
   .profile__add-button {
-    margin: 50px 20px -20px -150px;
+    align-self: flex-end;
+    padding: 0 75px 0 75px;
+    right: 150px;
+    position: relative;
   }
 
   .profile__image {
     margin-left: 100px;
+  }
+}
+
+@media screen and (max-width: 568px) {
+  .profile {
+    flex-direction: column;
+    margin-bottom: 0;
+  }
+
+  .profile__info {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .profile__edit-button {
+    width: 18px;
+    height: 18px;
+    border-style: solid;
+    margin: 28px 1px 0 8px;
+  }
+
+  .profile__add-button {
+    width: 282px;
+    margin: 36px 0px 36px;
+  }
+
+  .profile__title {
+    line-height: 26.63px;
+    font-size: 22px;
+    margin: 26.25px 10px 0 175px;
+  }
+
+  .profile__description {
+    line-height: 22px;
+    font-size: 14px;
+    margin: 14px 0 0 60px;
+    text-align: center;
+  }
+
+  .profile__image {
+    margin: auto;
   }
 }
 
@@ -103,14 +150,13 @@
 
   .profile__add-button {
     width: 282px;
-    height: 50px;
     margin: 36px 19px 36px;
-    border: solid white;
+    position: static;
   }
 
   .profile__title {
     width: 196px;
-    line-height: 22px;
+    line-height: 26.63px;
     font-size: 22px;
     margin: 26.25px 10px 0 62px;
   }

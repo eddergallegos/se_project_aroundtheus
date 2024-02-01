@@ -1,7 +1,8 @@
 .page {
   background-color: #000;
   color: #fff;
-  font-family: "Inter", Arial, sans-serif;
+  font-family: "Inter";
+  overflow-x: hidden;
 }
 
 .page__section {
