@@ -1,5 +1,5 @@
 .header {
-  border-bottom: 1px solid #545454;
+  border-bottom: rgb(128, 128, 128, 0.7) 1px solid;
   margin-top: 45px;
 }
 
@@ -19,7 +19,7 @@
   }
 
   .header__logo {
-    margin-left: 125px;
+    margin-left: 150px;
     width: 126px;
     height: 24px;
   }
@@ -32,8 +32,6 @@
   }
 
   .header__logo {
-    width: 126px;
-    height: 24px;
     margin: 28px 167px 32px 27px;
   }
 }

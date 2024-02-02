@@ -28,7 +28,5 @@
 @media screen and (max-width: 320px) {
   .footer__copywrite {
     margin: 48px 19px 36px;
-    line-height: 16.94px;
-    font-size: 14px;
   }
 }
