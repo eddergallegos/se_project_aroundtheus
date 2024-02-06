@@ -7,19 +7,12 @@
   margin-bottom: 41px;
 }
 
-@media screen and (max-width: 775px) {
-  .header {
-    max-width: 75%;
-  }
-}
-
 @media screen and (max-width: 568px) {
   .header {
     max-width: 100%;
   }
 
   .header__logo {
-    margin-left: 150px;
     width: 126px;
     height: 24px;
   }
@@ -28,10 +21,9 @@
 @media screen and (max-width: 320px) {
   .header {
     margin: 0;
-    max-width: 100%;
   }
 
   .header__logo {
-    margin: 28px 167px 32px 27px;
+    margin: 28px 148px 32px 19px;
   }
 }

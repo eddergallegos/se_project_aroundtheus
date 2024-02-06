@@ -1,7 +1,7 @@
 .footer__copywrite {
   color: #545454;
   font-size: 18px;
-  margin: 67px 884px 60px 200px;
+  margin: 67px 884px 60px 160px;
   line-height: 21.78px;
   text-align: center;
   white-space: nowrap;
@@ -12,7 +12,7 @@
     margin-left: 100px;
     font-size: 16px;
     line-height: 19.5px;
-    margin: 58px 100px;
+    margin: 58px 75px;
     text-align: left;
   }
 }
@@ -21,7 +21,7 @@
   .footer__copywrite {
     font-size: 14px;
     line-height: 16.94px;
-    margin: 48px 0 36px 145px;
+    margin: 48px 0 36px 115px;
   }
 }
 
