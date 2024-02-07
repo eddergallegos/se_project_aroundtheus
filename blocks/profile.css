@@ -82,8 +82,6 @@
   }
 
   .profile__info {
-    text-overflow: ellipsis;
-    white-space: nowrap;
     flex-basis: min-content;
   }
 
@@ -117,7 +115,6 @@
   }
 
   .profile__add-button {
-    position: sticky;
     margin: 36px 0 0;
   }
 
@@ -140,7 +137,6 @@
   .profile__edit-button {
     width: 18px;
     height: 18px;
-    border-style: solid;
   }
 
   .profile__add-button {
