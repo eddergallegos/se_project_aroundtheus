@@ -49,7 +49,6 @@
   grid-area: title;
   width: max-content;
   white-space: nowrap;
-  text-overflow: ellipsis;
   overflow: hidden;
   margin: 0;
   max-width: 373px;
