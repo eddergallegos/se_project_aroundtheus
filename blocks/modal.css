@@ -36,6 +36,10 @@
   cursor: pointer;
 }
 
+.modal__close:hover {
+  opacity: 0.6;
+}
+
 .modal__heading {
   color: black;
   width: 330px;
@@ -65,6 +69,10 @@
   line-height: 22px;
   cursor: pointer;
   margin-top: 18px;
+}
+
+.modal__button:hover {
+  opacity: 0.8;
 }
 
 @media screen and (max-width: 568px) {
