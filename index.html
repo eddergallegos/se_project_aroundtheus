@@ -47,118 +47,52 @@
         </section>
 
         <section class="cards page__section">
-          <ul class="cards__list">
-            <li class="cards__list-items">
-              <img
-                src="./images/yosemite.jpg"
-                alt="Yosemite Park"
-                class="cards__image"
-              />
-              <div class="cards__description">
-                <h2 class="cards__name">Yosemite Valley</h2>
-                <button
-                  class="cards__like-button"
-                  type="button"
-                  aria-label="like"
-                ></button>
-              </div>
-            </li>
-            <li class="cards__list-items">
-              <img
-                src="./images/lake-louise.jpg"
-                alt="Lake Louise"
-                class="cards__image"
-              />
-              <div class="cards__description">
-                <h2 class="cards__name">Lake Louise</h2>
-                <button
-                  class="cards__like-button"
-                  type="button"
-                  aria-label="like"
-                ></button>
-              </div>
-            </li>
-            <li class="cards__list-items">
-              <img
-                src="./images/bald-mountains.jpg"
-                alt="Bald Mountains"
-                class="cards__image"
-              />
-              <div class="cards__description">
-                <h2 class="cards__name">Bald Mountains</h2>
-                <button
-                  class="cards__like-button"
-                  type="button"
-                  aria-label="like"
-                ></button>
-              </div>
-            </li>
-            <li class="cards__list-items">
-              <img
-                src="./images/latemar.jpg"
-                alt="Latemar"
-                class="cards__image"
-              />
-              <div class="cards__description">
-                <h2 class="cards__name">Latemar</h2>
-                <button
-                  class="cards__like-button"
-                  type="button"
-                  aria-label="like"
-                ></button>
-              </div>
-            </li>
-            <li class="cards__list-items">
-              <img
-                src="./images/vanoise.jpg"
-                alt="Vanoise"
-                class="cards__image"
-              />
-              <div class="cards__description">
-                <h2 class="cards__name">Vaniose National Park</h2>
-                <button
-                  class="cards__like-button"
-                  type="button"
-                  aria-label="like"
-                ></button>
-              </div>
-            </li>
-            <li class="cards__list-items">
-              <img src="./images/lago.jpg" alt="Lago" class="cards__image" />
-              <div class="cards__description">
-                <h2 class="cards__name">Lago di Braies</h2>
-                <button
-                  class="cards__like-button"
-                  type="button"
-                  aria-label="like"
-                ></button>
-              </div>
-            </li>
-          </ul>
+          <ul class="cards__list"></ul>
         </section>
       </main>
 
       <footer class="footer page__section">
-        <p class="footer__copywrite">&copy;2024 Edder Gallegos</p>
+        <p class="footer__copywrite">&copy;2024 Around the U.S.</p>
       </footer>
     </div>
 
     <div class="modal" id="profile-edit-modal">
       <div class="modal__container">
-        <button class="modal__close" id="modal-close-button"></button>
+        <button class="modal__close" type="button"></button>
         <p class="modal__heading">Edit Profile</p>
         <form class="modal__form">
-          <input type="text" name="title" value="Name" class="modal__input" />
+          <input
+            type="text"
+            name="title"
+            placeholder="Name"
+            class="modal__input"
+            id="profile-title-input"
+          />
           <input
             type="text"
             name="description"
-            value="About me"
+            placeholder="About me"
             class="modal__input"
+            id="profile-description-input"
           />
           <button class="modal__button">Save</button>
         </form>
       </div>
     </div>
+
+    <template id="cardtemplate">
+      <li class="cards__list-items">
+        <img src="" alt="" class="cards__image" />
+        <div class="cards__description">
+          <h2 class="cards__name"></h2>
+          <button
+            class="cards__like-button"
+            type="button"
+            aria-label="like"
+          ></button>
+        </div>
+      </li>
+    </template>
 
     <script src="./scripts/index.js"></script>
   </body>
