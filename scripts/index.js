@@ -32,9 +32,8 @@ const initialCards = [
 
 console.log(initialCards);
 
-const profileEditButton = document.querySelector("#profile-edit-button");
 const profileEditModal = document.querySelector("#profile-edit-modal");
-const profileEditCloseButton = profileEditModal.querySelector(".modal__close");
+const addNewCardModal = document.querySelector("#add-new-card-modal");
 const profileTitle = document.querySelector(".profile__title");
 const profileDescription = document.querySelector(".profile__description");
 const profileTitleInput = document.querySelector("#profile-title-input");
@@ -46,14 +45,19 @@ const cardListEl = document.querySelector(".cards__list");
 const cardTemplate =
   document.querySelector("#card-template").content.firstElementChild;
 
+const profileEditButton = document.querySelector("#profile-edit-button");
+const profileEditCloseButton = profileEditModal.querySelector(".modal__close");
 const addNewCardButton = document.querySelector(".profile__add-button");
+const addNewCardCloseButton = addNewCardButton.querySelector(".modal__close");
 
 // Funtions
 function closePopop(modal) {
-  profileEditModal.classList.remove("modal_opened");
+  modal.classList.remove("modal_opened");
 }
 
-function openPopop(modal) {}
+function openPopop(modal) {
+  modal.classList.add("modal_opened");
+}
 
 function getCardElement(cardData) {
   const cardElement = cardTemplate.cloneNode(true);
@@ -69,21 +73,32 @@ function handleProfileEditSubmit(e) {
   e.preventDefault();
   profileTitle.textContent = profileTitleInput.value;
   profileDescription.textContent = profileDescriptionInput.value;
-  closePopop();
+  closePopop(profileEditModal);
+}
+
+function handleAddNewCardSubmit(e) {
+  e.preventDefault();
+  const name = newCardTitleInput.value;
+  const link = newCardUrlInput.value;
+  renderCard({ name, link }, cardListEl);
+  e.target.reset();
+  closePopop(addNewCardModal);
 }
 
 // Event Listeners
 profileEditButton.addEventListener("click", () => {
   profileTitleInput.value = profileTitle.textContent;
   profileDescriptionInput.value = profileDescription.textContent;
-  profileEditModal.classList.add("modal_opened");
+  openPopop(profileEditModal);
 });
 
-profileEditCloseButton.addEventListener("click", closePopop);
+profileEditCloseButton.addEventListener("click", () =>
+  closePopop(profileEditModal)
+);
 
 profileEditForm.addEventListener("submit", handleProfileEditSubmit);
 
-addNewCardButton.addEventListener("click", openPopop);
+addNewCardButton.addEventListener("click", () => openPopop(addNewCardModal));
 
 initialCards.forEach((cardData) => {
   const cardElement = getCardElement(cardData);
