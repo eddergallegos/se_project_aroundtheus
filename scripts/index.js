@@ -60,6 +60,8 @@ const jobInput = profileEditModal.querySelector(
 const cardTitleInput = addNewCardModal.querySelector("modal__input_type_title");
 const cardUrlInput = addNewCardModal.querySelector(".modal__input_type_url");
 
+const closeButtons = document.querySelector("modal__close");
+
 // Funtions
 function closePopop(modal) {
   modal.classList.remove("modal_opened");
