@@ -50,7 +50,7 @@ const profileEditButton = document.querySelector("#profile-edit-button");
 const profileEditCloseButton = profileEditModal.querySelector(".modal__close");
 const addNewCardButton = document.querySelector(".profile__add-button");
 const addNewCardCloseButton = addNewCardModal.querySelector(".modal__close");
-const addNewCardEditForm = addNewCardModal.querySelector(".modal__form");
+const addNewCardForm = addNewCardModal.querySelector(".modal__form");
 
 // Form data
 const nameInput = profileEditModal.querySelector(".modal__input_type_name");
@@ -101,16 +101,6 @@ function handleAddNewCardSubmit(e) {
 }
 
 // Event Listeners
-profileEditForm.addEventListener("submit", handleProfileEditSubmit);
-addNewCardEditForm.addEventListener("submit", handleAddNewCardSubmit);
-
-profileEditCloseButton.addEventListener("click", () =>
-  closePopop(profileEditModal)
-);
-addNewCardCloseButton.addEventListener("click", () =>
-  closePopop(addNewCardModal)
-);
-
 profileEditButton.addEventListener("click", () => {
   profileTitleInput.value = profileTitle.textContent;
   profileDescriptionInput.value = profileDescription.textContent;
@@ -120,5 +110,19 @@ addNewCardButton.addEventListener("click", () => openPopop(addNewCardModal));
 
 initialCards.forEach((cardData) => renderCard(cardData, cardsWrap));
 
-const likeButtons = document.querySelectorAll(".card__like-button");
-console.log(likeButtons);
+profileEditForm.addEventListener("submit", handleProfileEditSubmit);
+addNewCardForm.addEventListener("submit", handleAddNewCardSubmit);
+
+profileEditCloseButton.addEventListener("click", () =>
+  closePopop(profileEditModal)
+);
+addNewCardCloseButton.addEventListener("click", () =>
+  closePopop(addNewCardModal)
+);
+
+const likeButtons = document.querySelectorAll(".cards__like-button");
+likeButtons.forEach((likeButton) => {
+  likeButton.addEventListener("click", () => {
+    likeButton.classList.toggle("cards__like-button_active");
+  });
+});

@@ -51,6 +51,10 @@
   flex-shrink: 0;
 }
 
+.cards__like-button_active {
+  background: url(../images/like-active.svg);
+}
+
 .cards__like-button:hover {
   transition: 0.3s linear;
   cursor: pointer;
