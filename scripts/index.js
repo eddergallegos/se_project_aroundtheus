@@ -53,12 +53,10 @@ const addNewCardCloseButton = addNewCardModal.querySelector(".modal__close");
 const addNewCardForm = addNewCardModal.querySelector(".modal__form");
 
 // Form data
-const nameInput = profileEditModal.querySelector(".modal__input_type_name");
-const jobInput = profileEditModal.querySelector(
-  ".modal__input_type_description"
-);
-const cardTitleInput = addNewCardModal.querySelector("modal__input_type_title");
-const cardUrlInput = addNewCardModal.querySelector(".modal__input_type_url");
+const nameInput = profileEditModal.querySelector("#profile-title-input");
+const jobInput = profileEditModal.querySelector("#profile-description-input");
+const cardTitleInput = addNewCardModal.querySelector("#new-card-title-input");
+const cardUrlInput = addNewCardModal.querySelector("#new-card-url-input");
 
 const closeButtons = document.querySelector("modal__close");
 
@@ -86,19 +84,23 @@ function getCardElement(cardData) {
   return cardElement;
 }
 
-function handleProfileEditSubmit(e) {
+profileEditForm.addEventListener("submit", handleProfileEditFormSubmit);
+addNewCardForm.addEventListener("submit", handleAddNewCardFormSubmit);
+
+function handleProfileEditFormSubmit(e) {
   e.preventDefault();
   profileTitle.textContent = nameInput.value;
   profileDescription.textContent = jobInput.value;
   closePopop(profileEditModal);
 }
 
-function handleAddNewCardSubmit(e) {
+function handleAddNewCardFormSubmit(e) {
   e.preventDefault();
   const name = cardTitleInput.value;
+  const altName = cardTitleInput.value;
   const link = cardUrlInput.value;
-  renderCard({ name, link }, cardsWrap);
-  e.target.reset();
+  renderCard({ name, altName, link }, cardsWrap);
+  addNewCardForm.reset();
   closePopop(addNewCardModal);
 }
 
@@ -112,15 +114,12 @@ addNewCardButton.addEventListener("click", () => openPopop(addNewCardModal));
 
 initialCards.forEach((cardData) => renderCard(cardData, cardsWrap));
 
-profileEditForm.addEventListener("submit", handleProfileEditSubmit);
-addNewCardForm.addEventListener("submit", handleAddNewCardSubmit);
-
-profileEditCloseButton.addEventListener("click", () =>
-  closePopop(profileEditModal)
-);
-addNewCardCloseButton.addEventListener("click", () =>
-  closePopop(addNewCardModal)
-);
+profileEditCloseButton.addEventListener("click", () => {
+  closePopop(profileEditModal);
+});
+addNewCardCloseButton.addEventListener("click", () => {
+  closePopop(addNewCardModal);
+});
 
 const likeButtons = document.querySelectorAll(".cards__like-button");
 likeButtons.forEach((likeButton) => {
