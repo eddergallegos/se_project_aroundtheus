@@ -44,6 +44,10 @@ const profileDescriptionInput = document.querySelector(
   "#profile-description-input"
 );
 const profileEditForm = profileEditModal.querySelector(".modal__form");
+const previewModal = document.querySelector("#preview-modal");
+const modalPreviewImage = document.querySelector(".modal__preview-image");
+const previewModalCloseButton = document.querySelector("#preview-button-close");
+const modalPreviewTitle = document.querySelector(".modal__preview-heading");
 
 // Buttons
 const profileEditButton = document.querySelector("#profile-edit-button");
@@ -78,15 +82,25 @@ function getCardElement(cardData) {
   const cardElement = cardTemplate.cloneNode(true);
   const cardImage = cardElement.querySelector(".cards__image");
   const cardTitle = cardElement.querySelector(".cards__name");
-  const likeButton = cardElement.querySelector(".cards__like-button");
+  const cardLikeButton = cardElement.querySelector(".cards__like-button");
+  const cardTrashButton = cardElement.querySelector(".cards__trash-button");
 
-  likeButton.addEventListener("click", () => {
-    likeButton.classList.toggle("cards__like-button_active");
+  cardLikeButton.addEventListener("click", () => {
+    cardLikeButton.classList.toggle("cards__like-button_active");
   });
 
   cardImage.src = cardData.link;
-  cardImage.alt = cardData.name;
   cardTitle.textContent = cardData.name;
+
+  cardImage.addEventListener("click", () => {
+    modalPreviewImage.src = cardData.link;
+    modalPreviewTitle.textContent = cardData.name;
+    openPopop(previewModal);
+  });
+
+  cardTrashButton.addEventListener("click", () => {
+    cardElement.remove();
+  });
 
   return cardElement;
 }
@@ -104,9 +118,8 @@ function handleProfileEditFormSubmit(e) {
 function handleAddNewCardFormSubmit(e) {
   e.preventDefault();
   const name = cardTitleInput.value;
-  const altName = cardTitleInput.value;
   const link = cardUrlInput.value;
-  renderCard({ name, altName, link }, cardsWrap);
+  renderCard({ name, link }, cardsWrap);
   addNewCardForm.reset();
   closePopop(addNewCardModal);
 }
@@ -126,4 +139,7 @@ profileEditCloseButton.addEventListener("click", () => {
 });
 addNewCardCloseButton.addEventListener("click", () => {
   closePopop(addNewCardModal);
+});
+previewModalCloseButton.addEventListener("click", () => {
+  closePopop(previewModal);
 });
