@@ -78,9 +78,16 @@ function getCardElement(cardData) {
   const cardElement = cardTemplate.cloneNode(true);
   const cardImage = cardElement.querySelector(".cards__image");
   const cardTitle = cardElement.querySelector(".cards__name");
+  const likeButton = cardElement.querySelector(".cards__like-button");
+
+  likeButton.addEventListener("click", () => {
+    likeButton.classList.toggle("cards__like-button_active");
+  });
+
   cardImage.src = cardData.link;
   cardImage.alt = cardData.name;
   cardTitle.textContent = cardData.name;
+
   return cardElement;
 }
 
@@ -119,11 +126,4 @@ profileEditCloseButton.addEventListener("click", () => {
 });
 addNewCardCloseButton.addEventListener("click", () => {
   closePopop(addNewCardModal);
-});
-
-const likeButtons = document.querySelectorAll(".cards__like-button");
-likeButtons.forEach((likeButton) => {
-  likeButton.addEventListener("click", () => {
-    likeButton.classList.toggle("cards__like-button_active");
-  });
 });
