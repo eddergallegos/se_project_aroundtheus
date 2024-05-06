@@ -70,18 +70,28 @@
             type="text"
             name="name"
             placeholder="Name"
-            class="modal__input modal__input_type_name"
+            class="modal__input modal__input_type_name modal__input_type_error"
             id="profile-title-input"
+            minlength="2"
+            maxlength="40"
             required
           />
+          <span class="modal__error" id="profile-title-input-error"
+            >Please fill out this field.</span
+          >
           <input
             type="text"
             name="description"
             placeholder="About me"
-            class="modal__input modal__input_type_description"
+            class="modal__input modal__input_type_description modal__input_type_error"
             id="profile-description-input"
+            minlength="2"
+            maxlength="200"
             required
           />
+          <span class="modal__error" id="profile-description-input-error"
+            >Please fill out this field.</span
+          >
           <button class="modal__button" type="submit">Save</button>
         </form>
       </div>

@@ -61,7 +61,6 @@
   height: 27px;
   border: 1px;
   border-bottom: rgba(0, 0, 0, 0.2) solid;
-  margin-bottom: 30px;
   font-size: 14px;
   line-height: 17px;
   width: 100%;
@@ -104,6 +103,23 @@
 .modal__preview-image {
   max-width: 75vw;
   max-height: 75vh;
+}
+
+.modal__error {
+  font-size: 12px;
+  line-height: 15px;
+  color: red;
+  top: calc(100% + 5px);
+  transition: opacity 0.3s;
+  bottom: 13px;
+}
+
+.modal__input_type_error {
+  border-bottom: 1px solid red;
+}
+
+.modal__error_visible {
+  opacity: 1;
 }
 
 @media screen and (max-width: 568px) {
