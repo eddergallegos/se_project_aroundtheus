@@ -1,42 +1,53 @@
 function showInputError(formEl, inputEl, { inputErrorClass, errorClass }) {
   const errorMessageEl = formEl.querySelector(`#${inputEl.id}-error`);
   inputEl.classList.add(inputErrorClass);
-  errorMessageEl.textContext = inputEl.validationMessage;
+  errorMessageEl.textContent = inputEl.validationMessage;
   errorMessageEl.classList.add(errorClass);
 }
 
 function hideInputError(formEl, inputEl, { inputErrorClass, errorClass }) {
   const errorMessageEl = formEl.querySelector(`#${inputEl.id}-error`);
   inputEl.classList.remove(inputErrorClass);
-  errorMessageEl.textContext = "";
+  errorMessageEl.textContent = "";
   errorMessageEl.classList.remove(errorClass);
 }
 
-function checkInputValidity(formEl, inputEl, options) {
-  if (!inputEl.validity.valid) {
-    showInputError(formEl, inputEl, options);
-  } else {
-    hideInputError(formEl, inputEl, options);
-  }
+function checkInputValidity(formEl, inputEl, { inputErrorClass, errorClass }) {
+  const errorMessageEl = formEl.querySelector(`#${inputEl.id}-error`);
+
+  inputEl.classList.toggle(
+    inputErrorClass,
+    !inputEl.validity.valid || !isURLValid(inputEl.value)
+  );
+  errorMessageEl.textContent = inputEl.validationMessage;
+  errorMessageEl.classList.toggle(
+    errorClass,
+    !inputEl.validity.valid || !isURLValid(inputEl.value)
+  );
+}
+
+function isURLValid(url) {
+  const urlPattern = /^(ftp|http|https):\/\/[^ "]+$/;
+  return urlPattern.test(url);
 }
 
 function hasInvalidInput(inputList) {
   return inputList.every((inputEl) => !inputEl.validity.valid);
 }
 
-function disableButton(submitButton, inactiveButtonClass) {
+function disabledButton(submitButton, inactiveButtonClass) {
   submitButton.classList.add(inactiveButtonClass);
   submitButton.disabled = true;
 }
 
-function disableButton(submitButton, inactiveButtonClass) {
+function enableButton(submitButton, inactiveButtonClass) {
   submitButton.classList.remove(inactiveButtonClass);
   submitButton.disabled = false;
 }
 
 function toggleButtonState(inputEls, submitButton, { inactiveButtonClass }) {
   if (hasInvalidInput(inputEls)) {
-    disableButton(submitButton, inactiveButtonClass);
+    disabledButton(submitButton, inactiveButtonClass);
     return;
   }
   enableButton(submitButton, inactiveButtonClass);

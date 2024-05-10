@@ -61,10 +61,19 @@
   height: 27px;
   border: 1px;
   border-bottom: rgba(0, 0, 0, 0.2) solid;
+  margin-bottom: 30px;
   font-size: 14px;
   line-height: 17px;
   width: 100%;
   padding: 0;
+}
+
+.modal__input:empty {
+  opacity: 0.5;
+}
+
+.modal__input:not(:empty) {
+  opacity: 1;
 }
 
 .modal__button {
@@ -116,10 +125,19 @@
 
 .modal__input_type_error {
   border-bottom: 1px solid red;
+  margin-bottom: 0;
 }
 
 .modal__error_visible {
   opacity: 1;
+}
+
+.modal__button_disabled {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  color: rgba(0, 0, 0, 0.2);
+  background: rgb(252, 250, 250);
+  pointer-events: none;
+  user-select: none;
 }
 
 @media screen and (max-width: 568px) {
